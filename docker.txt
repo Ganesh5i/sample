@@ -27,3 +27,14 @@ Simple Login Page
 
 </body>
 </html>
+
+
+
+
+
+docker build -t login-page-app .
+docker run -d -p 8080:80 --name login-container login-page-app
+docker ps
+start http://localhost:8080
+docker stop login-container
+docker rm login-container
